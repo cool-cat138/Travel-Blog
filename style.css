@@ -81,8 +81,7 @@ body {
 
 .content {
     width: 70%;
-    background-color: #FAF5E9;
-    padding-bottom: 60px;
+    padding-bottom: 0px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -214,14 +213,37 @@ img {
     padding-bottom: 2px;
 }
 
+/* --- ОНОВЛЕНИЙ ЗЕЛЕНИЙ БЛОК --- */
 .upcoming-itinerary {
     background-color: #637351;
-    padding: 80px 40px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 60px;
+    
+    /* Збільшили відступ знизу, щоб гори не їли текст */
+    padding: 80px 40px 250px 40px; 
+    
+    /* Зсунули координати гір нижче */
+    clip-path: polygon(
+        0 0, 
+        100% 0, 
+        100% 92%, 
+        95% 94%, 
+        80% 85%, 
+        70% 91%, 
+        65% 90%, 
+        55% 94%, 
+        45% 88%, 
+        30% 83%, 
+        15% 90%, 
+        8% 94%, 
+        0 92%
+    );
+    
+    /* Підтягуємо футер у цю порожнечу */
+    margin-bottom: -150px; 
 }
 
 .upcoming-itinerary h2 {
@@ -288,15 +310,18 @@ img {
 .itinerary-list .mini-img {
     width: 160px;
     height: 110px;
-    border-radius: 80px / 55px; /* Створюємо яйцеподібну форму */
+    border-radius: 80px / 55px;
     margin-left: 30px;
     object-fit: cover;
 }
 
+/* --- ФУТЕР --- */
 .main-footer {
     text-align: center;
-    padding: 80px 40px;
+    padding: 100px 40px 80px 40px;
     color: #111;
+    width: 100%;
+    position: relative;
 }
 
 .footer-tag {
