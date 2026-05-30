@@ -1,12 +1,10 @@
 ### Name:
-# Travel Blog
+# Web-Tech Lab
 ---
 
-![Aura farm cat](cool_cat.png)
+![lab cat](cat4lab.jpg)
 
 
 ---
 
 * **Developer:** *Fedoruk Maxym*
-* **Description:** This is an educational project on web-technologies.
-* [Figma Design](https://www.figma.com/site/jdBHhDEy8xA5luIIWZvtBT/Creative-Travel-Blog--Community-?node-id=0-1&p=f&t=W9GRYwKQT1zygTEZ-0)
