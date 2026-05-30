@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 
-/* --- БАЗА --- */
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +9,7 @@
 body {
     font-family: 'Inter', sans-serif;
     color: #111;
+    background-color: #FAF5E9;
 }
 
 .layout-wrapper {
@@ -17,17 +17,15 @@ body {
     min-height: 100vh;
 }
 
-/* --- САЙДБАР --- */
 .sidebar {
     width: 30%; 
     min-width: 300px;
     background-color: #C4DAFE;
     padding: 40px;
-    position: fixed;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center; 
+    gap: 60px;
 }
 
 .top-nav {
@@ -50,6 +48,10 @@ body {
     font-weight: bold;
 }
 
+.brand-area {
+    text-align: center;
+}
+
 .logo {
     font-size: 54px;
     font-weight: 900;
@@ -67,32 +69,61 @@ body {
 }
 
 .location-widget {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     font-size: 12px;
     color: #0B3BCA;
+    font-weight: 600;
+}
+
+.content {
+    width: 70%;
+    background-color: #FAF5E9;
+    padding-bottom: 60px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
 }
 
-/* --- ПРАВА ЧАСТИНА --- */
-.content {
-    margin-left: 30%;
+.hero-bg-container {
     width: 100%;
-    background-color: #FAF5E9;
-    padding: 60px 80px;
+    background-image: url('img/fone.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    background-attachment: scroll;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* --- НАЛАШТУВАННЯ ВСІХ ФОТОК --- */
+.hero-section {
+    width: 100%;
+    max-width: 1000px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0 40px;
+}
+
+.latest-stories, .upcoming-itinerary, .main-footer {
+    width: 100%;
+    max-width: 1000px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    padding: 0 40px;
+}
+
 img {
     width: 100%;
     object-fit: cover;
     display: block;
-}
-
-/* --- HERO СЕКЦІЯ --- */
-.hero-section {
-    text-align: center;
-    margin-bottom: 60px;
 }
 
 .featured-card {
@@ -100,19 +131,14 @@ img {
     padding: 20px;
     border-radius: 16px;
     max-width: 600px;
-    margin: 0 auto;
+    width: 100%;
     box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
 .featured-card img {
-    /* У файлі style.css */
-.featured-card img {
-    height: auto;      
-    width: 100%;       
+    height: auto;
     border-radius: 16px;
     margin-bottom: 20px;
-    object-fit: cover; 
-}
 }
 
 .featured-card .tag {
@@ -130,11 +156,11 @@ img {
 
 .scroll-hint {
     font-size: 12px;
-    color: #999;
+    color: #111;
     margin-top: 15px;
+    font-weight: 600;
 }
 
-/* --- ІСТОРІЇ --- */
 .latest-stories h2 {
     font-size: 32px;
     text-align: center;
@@ -147,6 +173,7 @@ img {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-bottom: 30px;
+    width: 100%;
 }
 
 .story-card {
@@ -177,8 +204,6 @@ img {
 }
 
 .view-all-btn {
-    display: block;
-    margin: 0 auto;
     background: transparent;
     border: none;
     font-size: 12px;
@@ -189,12 +214,12 @@ img {
     padding-bottom: 2px;
 }
 
-/* --- РОЗКЛАД (Зелений блок) --- */
 .upcoming-itinerary {
-    margin-top: 60px;
     background-color: #637351;
     padding: 60px;
     border-radius: 20px;
+    width: 100%;
+    max-width: 800px;
 }
 
 .upcoming-itinerary h2 {
@@ -208,6 +233,7 @@ img {
 
 .itinerary-list {
     list-style: none;
+    width: 100%;
 }
 
 .itinerary-list li {
@@ -233,6 +259,7 @@ img {
 .itinerary-list .details {
     flex: 1;
     padding-left: 20px;
+    text-align: left;
 }
 
 .itinerary-list .details h3 {
@@ -253,18 +280,17 @@ img {
     border-radius: 40px;
 }
 
-/* --- ПІДВАЛ --- */
 .main-footer {
-    margin-top: 60px;
     text-align: center;
     padding-bottom: 40px;
+    color: #111;
 }
 
 .footer-tag {
     font-size: 12px;
     font-weight: 600;
     text-transform: uppercase;
-    color: #666;
+    color: #333;
 }
 
 .main-footer h2 {
@@ -275,22 +301,7 @@ img {
     letter-spacing: -2px;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin-bottom: 20px;
-}
-
-.footer-links a {
-    text-decoration: none;
-    color: black;
-    font-weight: 700;
-    font-size: 12px;
-    text-transform: uppercase;
-}
-
 .copyright {
     font-size: 12px;
-    color: #999;
+    color: #333;
 }
