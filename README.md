@@ -2,7 +2,7 @@
 # Web-Tech Lab
 ---
 
-![lab cat](cat4lab.jpg)
+![lab cat](img/cat4lab.jpg)
 
 
 ---
